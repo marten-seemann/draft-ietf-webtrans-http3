@@ -956,7 +956,7 @@ Table of Contents
 5.5.  Flow Control SETTINGS
 
    Initial flow control limits can be exchanged via HTTP/3 SETTINGS
-   (Section 9.2) by providing
+   (Section 9.2) by providing non-zero values for
 
    *  WT_MAX_STREAMS via SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and
       SETTINGS_WT_INITIAL_MAX_STREAMS_BIDI
@@ -1092,8 +1092,8 @@ Table of Contents
    consume WT_MAX_STREAMS capsules for flow control purposes and MUST
    generate and send appropriate flow control signals for their limits.
 
-   Initial values for these limits MAY be communicated using
-   SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and
+   Initial values for these limits MAY be communicated by sending non-
+   zero values for SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and
    SETTINGS_WT_INITIAL_MAX_STREAMS_BIDI.
 
 5.6.3.  WT_STREAMS_BLOCKED Capsule
@@ -1184,8 +1184,8 @@ Table of Contents
    generate and send appropriate flow control signals for their limits
    (see Section 5.6.1).
 
-   The initial value for this limit MAY be communicated using
-   SETTINGS_WT_INITIAL_MAX_DATA.
+   The initial value for this limit MAY be communicated by sending a
+   non-zero value for SETTINGS_WT_INITIAL_MAX_DATA.
 
 5.6.5.  WT_DATA_BLOCKED Capsule
 

@@ -2241,7 +2241,7 @@ WT_STREAM_DATA_BLOCKED capsule as a session error.<a href="#section-5.4-4" class
 <a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-flow-control-settings" class="section-name selfRef">Flow Control SETTINGS</a>
         </h3>
 <p id="section-5.5-1">Initial flow control limits can be exchanged via HTTP/3 SETTINGS
-(<a href="#http3-settings" class="auto internal xref">Section 9.2</a>) by providing<a href="#section-5.5-1" class="pilcrow">¶</a></p>
+(<a href="#http3-settings" class="auto internal xref">Section 9.2</a>) by providing non-zero values for<a href="#section-5.5-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5.5-2.1">
             <p id="section-5.5-2.1.1"><span id="iref-wt_max_streams-7" class="iref"></span><a href="#WT_MAX_STREAMS" class="internal xref">WT_MAX_STREAMS</a> via SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and
@@ -2397,8 +2397,9 @@ close the WebTransport session with a WT_FLOW_CONTROL_ERROR error code.<a href="
 in <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.2" class="relref">Section 3.2</a> of [<a href="#HTTP-DATAGRAM" class="cite xref">HTTP-DATAGRAM</a>]</span>.  Intermediaries MUST consume <span id="iref-wt_max_streams-33" class="iref"></span><a href="#WT_MAX_STREAMS" class="internal xref">WT_MAX_STREAMS</a>
 capsules for flow control purposes and MUST generate and send appropriate flow
 control signals for their limits.<a href="#section-5.6.2-10" class="pilcrow">¶</a></p>
-<p id="section-5.6.2-11">Initial values for these limits MAY be communicated using
-SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and SETTINGS_WT_INITIAL_MAX_STREAMS_BIDI.<a href="#section-5.6.2-11" class="pilcrow">¶</a></p>
+<p id="section-5.6.2-11">Initial values for these limits MAY be communicated by sending non-zero values
+for SETTINGS_WT_INITIAL_MAX_STREAMS_UNI and
+SETTINGS_WT_INITIAL_MAX_STREAMS_BIDI.<a href="#section-5.6.2-11" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="WT_STREAMS_BLOCKED">
@@ -2504,8 +2505,8 @@ close the WebTransport session with a WT_FLOW_CONTROL_ERROR error code.<a href="
 <span><a href="https://rfc-editor.org/rfc/rfc9297#section-3.2" class="relref">Section 3.2</a> of [<a href="#HTTP-DATAGRAM" class="cite xref">HTTP-DATAGRAM</a>]</span>.  Intermediaries MUST consume <span id="iref-wt_max_data-49" class="iref"></span><a href="#WT_MAX_DATA" class="internal xref">WT_MAX_DATA</a>
 capsules for flow control purposes and MUST generate and send appropriate flow
 control signals for their limits (see <a href="#flow-control-intermediaries" class="auto internal xref">Section 5.6.1</a>).<a href="#section-5.6.4-8" class="pilcrow">¶</a></p>
-<p id="section-5.6.4-9">The initial value for this limit MAY be communicated using
-SETTINGS_WT_INITIAL_MAX_DATA.<a href="#section-5.6.4-9" class="pilcrow">¶</a></p>
+<p id="section-5.6.4-9">The initial value for this limit MAY be communicated by sending a non-zero value
+for SETTINGS_WT_INITIAL_MAX_DATA.<a href="#section-5.6.4-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="WT_DATA_BLOCKED">

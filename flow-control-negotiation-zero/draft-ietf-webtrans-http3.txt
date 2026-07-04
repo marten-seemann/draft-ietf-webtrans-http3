@@ -5,10 +5,10 @@
 WEBTRANS                                                     A. Frindell
 Internet-Draft                                                  Facebook
 Intended status: Standards Track                              E. Kinnear
-Expires: 31 December 2026                                     Apple Inc.
+Expires: 5 January 2027                                       Apple Inc.
                                                              V. Vasiliev
                                                                   Google
-                                                            29 June 2026
+                                                             4 July 2026
 
 
                         WebTransport over HTTP/3
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 December 2026.
+   This Internet-Draft will expire on 5 January 2027.
 
 Copyright Notice
 
@@ -843,8 +843,9 @@ Table of Contents
    Flow control is enabled when both endpoints send at least one of
    SETTINGS_WT_INITIAL_MAX_STREAMS_UNI,
    SETTINGS_WT_INITIAL_MAX_STREAMS_BIDI, or
-   SETTINGS_WT_INITIAL_MAX_DATA.  Zero is valid and grants no initial
-   stream or session data credit; the limits in Section 5 then apply.
+   SETTINGS_WT_INITIAL_MAX_DATA.  A value of "0" is valid and grants no
+   initial stream or session data credit; the limits in Section 5 then
+   apply.
 
    Flow control can be enabled regardless of the number of WebTransport
    sessions a server supports.
@@ -1713,9 +1714,9 @@ Table of Contents
    [RESET-STREAM-AT]
               Seemann, M. and K. Oku, "QUIC Stream Resets with Partial
               Delivery", Work in Progress, Internet-Draft, draft-ietf-
-              quic-reliable-stream-reset-08, 26 June 2026,
+              quic-reliable-stream-reset-09, 4 July 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              reliable-stream-reset-08>.
+              reliable-stream-reset-09>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
